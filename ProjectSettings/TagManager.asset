@@ -8,6 +8,8 @@ TagManager:
   - bomb
   - Asteroid
   - Ground
+  - DeathGround
+  - Ship
   layers:
   - Default
   - TransparentFX

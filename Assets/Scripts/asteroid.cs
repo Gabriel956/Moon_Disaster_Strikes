@@ -23,8 +23,6 @@ public class Asteroid : MonoBehaviour
     {
         if (isDestroyed) return;
         
-        Debug.Log("Asteroid hit: " + collision.gameObject.name + " with tag: " + collision.gameObject.tag);
-        
         // Hit the player and asteroid destroyed (player death handled by death.cs)
         if (collision.gameObject.CompareTag("Player"))
         {
@@ -32,6 +30,10 @@ public class Asteroid : MonoBehaviour
         }
         // Hit ground or platform and asteroid is destoyed
         else if (collision.gameObject.CompareTag("Ground"))
+        {
+            DestroyAsteroid();
+        }
+        else if (collision.gameObject.CompareTag("DeathGround"))
         {
             DestroyAsteroid();
         }

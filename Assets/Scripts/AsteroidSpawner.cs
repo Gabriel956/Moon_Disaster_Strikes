@@ -8,9 +8,9 @@ public class AsteroidSpawner : MonoBehaviour
     [SerializeField] private float spawnIntervalVariance = 1f; // Random variance
     
     [Header("Spawn Area")]
-    [SerializeField] private float minX = -8f;  // Left boundary
-    [SerializeField] private float maxX = 8f;   // Right boundary
-    [SerializeField] private float spawnY = 6f; // Height to spawn at
+    [SerializeField] private float minX = -23f;  // Left boundary
+    [SerializeField] private float maxX = 15f;   // Right boundary
+    [SerializeField] private float spawnY = 21f; // Height to spawn at
     
     [Header("Difficulty")]
     [SerializeField] private float minSpawnInterval = 0.5f;   // Fastest spawn rate
