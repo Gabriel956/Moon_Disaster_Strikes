@@ -37,6 +37,10 @@ public class Asteroid : MonoBehaviour
         {
             DestroyAsteroid();
         }
+        else if (collision.gameObject.CompareTag("Ship"))
+        {
+            DestroyAsteroid();
+        }
     }
 
     void DestroyAsteroid()
