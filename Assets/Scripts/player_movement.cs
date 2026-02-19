@@ -9,9 +9,9 @@ public class player_movement : MonoBehaviour
 
     void Start()
     {
-
         GameSettings.Load();
         speed = GameSettings.PlayerSpeed;
+        jumpForce = GameSettings.PlayerJumpForce;
         body = GetComponent<Rigidbody2D>();
     }
 
