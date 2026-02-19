@@ -409,7 +409,7 @@ GameObject:
   - component: {fileID: 474135310}
   - component: {fileID: 474135309}
   m_Layer: 5
-  m_Name: yesButton
+  m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -864,9 +864,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 756630234}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 12
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1.66
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
