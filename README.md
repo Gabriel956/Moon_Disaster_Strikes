@@ -10,3 +10,9 @@ You’re an astronaut on the moon doing important moon research when suddenly.. 
   - Added slider for jump force
 - Added player animation
 - Added boxcast check for jump
+
+
+
+- Gabriel Baez
+- Omar Alanis
+- Elyn Cortez
