@@ -5,16 +5,10 @@ public class player_movement : MonoBehaviour
     [SerializeField] private float speed = 5f;
     [SerializeField] private float jumpForce = 7f;
 
-    // Raycasting stuff lol
-    public Vector2 boxSize;
-    public float castDistance;
-    public LayerMask groundLayer;
-
     private Rigidbody2D body;
 
     void Start()
     {
-        Debug.Log("Loading player speed from GameSettings");
 
         GameSettings.Load();
         speed = GameSettings.PlayerSpeed;
@@ -23,36 +17,16 @@ public class player_movement : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded())
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("Jumping");
             body.linearVelocity = new Vector2(body.linearVelocity.x, jumpForce);
         }
     }
 
     void FixedUpdate()
     {
-        Debug.Log("Updating player horizontal movement");
         float horizontalInput = Input.GetAxis("Horizontal");
         body.linearVelocity = new Vector2(horizontalInput * speed, body.linearVelocity.y);
-    }
-
-    public bool isGrounded()
-    {
-        if (Physics2D.BoxCast(transform.position, boxSize, 0, -transform.up, castDistance, groundLayer))
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
-
-    // help visualize box casting for isGrounded
-    void OnDrawGizmos()
-    {
-        Gizmos.DrawWireCube(transform.position - transform.up * castDistance, boxSize);
     }
 }
 
