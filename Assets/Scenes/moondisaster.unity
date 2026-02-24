@@ -3734,114 +3734,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3348231441767704442, guid: 68b4e22631b0a2e4e9dd28b4c2ffaf43, type: 3}
   m_PrefabInstance: {fileID: 912266762622535211}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1476185925}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.9941, y: -2.1770995, z: -2.3429}
-  m_LocalScale: {x: 0.1739039, y: 0.17390394, z: 0.17390394}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1476185930
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1476185925}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac85517a43c4ff148bbc44d3bdbcea4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::player_movement
-  speed: 5
-  jumpForce: 15
-  boxSize: {x: 0.88, y: 0.75}
-  castDistance: 0.6
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 64
---- !u!61 &1476185931
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1476185925}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0.1755439, y: 0.50824714}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.16, y: 8.42}
-    newSize: {x: 5.16, y: 8.42}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 4.8089123, y: 7.403506}
-  m_EdgeRadius: 0
---- !u!114 &1476185932
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1476185925}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d359882363efb604799306e6c5f3190e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::death
---- !u!95 &1476185933
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1476185925}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 596353a001a4c3544bf8e00da26aa726, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1483756594
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5251,6 +5143,22 @@ PrefabInstance:
     - target: {fileID: 1924915979200268563, guid: 68b4e22631b0a2e4e9dd28b4c2ffaf43, type: 3}
       propertyPath: m_Name
       value: astronautPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827158333304528968, guid: 68b4e22631b0a2e4e9dd28b4c2ffaf43, type: 3}
+      propertyPath: boxSize.x
+      value: 0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827158333304528968, guid: 68b4e22631b0a2e4e9dd28b4c2ffaf43, type: 3}
+      propertyPath: boxSize.y
+      value: 0.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827158333304528968, guid: 68b4e22631b0a2e4e9dd28b4c2ffaf43, type: 3}
+      propertyPath: castDistance
+      value: 0.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827158333304528968, guid: 68b4e22631b0a2e4e9dd28b4c2ffaf43, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 3348231441767704442, guid: 68b4e22631b0a2e4e9dd28b4c2ffaf43, type: 3}
       propertyPath: m_LocalPosition.x
