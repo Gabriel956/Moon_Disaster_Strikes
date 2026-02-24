@@ -8,6 +8,11 @@ public class player_movement : MonoBehaviour
     private Rigidbody2D body;
     public float speed = 5f;
     public float jumpForce = 7f;
+
+    public Vector2 boxSize;
+    public float castDistance;
+    public LayerMask groundLayer;
+
     Animator animator;
     void Start()
     {
@@ -43,7 +48,7 @@ public class player_movement : MonoBehaviour
         else if (horizontalInput < -0.01f)
             transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
 
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded())
             body.linearVelocity = new Vector2(body.linearVelocity.x, jumpForce);
     }
 
@@ -51,6 +56,24 @@ public class player_movement : MonoBehaviour
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         body.linearVelocity = new Vector2(horizontalInput * speed, body.linearVelocity.y);
+    }
+
+    public bool isGrounded()
+    {
+        if (Physics2D.BoxCast(transform.position, boxSize, 0, -transform.up, castDistance, groundLayer))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    // help visualize box casting for isGrounded
+    void OnDrawGizmos()
+    {
+        Gizmos.DrawWireCube(transform.position - transform.up * castDistance, boxSize);
     }
 }
 
