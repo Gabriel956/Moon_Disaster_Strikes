@@ -5150,7 +5150,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2827158333304528968, guid: 68b4e22631b0a2e4e9dd28b4c2ffaf43, type: 3}
       propertyPath: boxSize.y
-      value: 0.34
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 2827158333304528968, guid: 68b4e22631b0a2e4e9dd28b4c2ffaf43, type: 3}
       propertyPath: castDistance
